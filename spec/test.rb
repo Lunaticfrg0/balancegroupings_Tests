@@ -28,3 +28,10 @@ RSpec.describe Balanced do
       end
     end
   end
+  RSpec.describe Balanced do
+    describe '[{] => false' do
+      it 'returns false to: [{])' do
+        expect(Balanced.new.getBalance("[{]")).to eq(false)
+      end
+    end
+  end
