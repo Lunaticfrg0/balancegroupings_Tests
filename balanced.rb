@@ -16,15 +16,22 @@ class Balanced
                 balanceP += 1
             when ")"
                 balanceP -= 1
-              else
-                
+            when "["
+                balanceSB += 1
+            when "]"
+                balanceSB -= 1
+            when "{"
+                balanceB += 1
+            when "}"
+                balanceB -= 1
+            else
               end 
               i+=1
         end
-        if (balanceP === 0) 
-            return true
-        else
+        if (balanceP != 0 or balanceSB != 0 or balanceB != 0) 
             return false
+        else
+            return true
         end
     end    
 
