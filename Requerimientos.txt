@@ -1,16 +1,17 @@
--Requerimientos
-    --REQ-F-1: El sistema debe analizar el string recibido para devolver una respuesta que indique si los caracteres del string estan balaceados.
-    --REQ-NF-1: El programa debe retornar la respuesta de la analitica  en un tiempo menor a 3 segundos.
-    --REQ-NF-2: El programa debe retornar la respuesta de las pruebas en un tiempo menor a 3 segundos.
+--Requerimientos
+    --REQ-F-1: El sistema debe analizar un string y decir si la cantidad de signos (), {}, [] estan balanceadas, o sea, que para cada
+                signo abierto, haya uno cerrado.
+    --REQ-NF-1: El sistema debe responder al usuario en un tiempo menor a dos segundos el resultado del analisis.
+    --REQ-NF-2: El sistema debe responder al usuario en un tiempo menor a dos segundos el resultado de las pruebas al analisis.
 
--Criterios de Exito
-    --CR-REQ-F-1: Correcta deteccion del balance de un conjunto de caracteres.
-    --CR-REQ-NF-1: Retorno de informacion en un tiempo menor al especificado.
-    --CR-REQ-NF-2: Retorno de informacion en un tiempo menor al especificado.
+--Criterios de Exito
+    -CE-REQ-F-1: El sistema retorna de manera correcta el resultado del examen basado en el string suministrado.
+    -CE-REQ-NF-1: El sistema retorna la respuesta en menos de dos segundos.
+    -CE-REQ-NF-2: El sistema retorna los resultados de las pruebas en menos de dos segundos.
 
--Escenarios de Prueba
+--Escenarios de prueba
     --"()" => true
-    --"a + (b + c)" => true
-    --"(" => false
-    --([{}]) => true
-    --[{] => false
+    --"{[)" => false
+    --"a+(c+b)" => true
+    --"({[]})" => true
+    --"}" => false
