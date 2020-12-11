@@ -14,3 +14,10 @@ RSpec.describe Balanced do
     end
   end
 end
+RSpec.describe Balanced do
+  describe '"a+(c+b)" => true' do
+    it 'returns true to input: a+(c+b)' do
+      expect(Balanced.new.getBalance("a+(c+b)")).to eq(true)
+    end
+  end
+end
