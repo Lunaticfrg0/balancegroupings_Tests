@@ -1,17 +1,18 @@
 --Requerimientos
-    --REQ-F-1: El sistema debe analizar un string y decir si la cantidad de signos (), {}, [] estan balanceadas, o sea, que para cada
-                signo abierto, haya uno cerrado.
-    --REQ-NF-1: El sistema debe responder al usuario en un tiempo menor a dos segundos el resultado del analisis.
-    --REQ-NF-2: El sistema debe responder al usuario en un tiempo menor a dos segundos el resultado de las pruebas al analisis.
+    --REQ-F-1: El sistema debe permitir al usuario analizar un string y devolver un resutado indicando si el
+                string a analizar, tiene balance con respecto a los signos de agrupacion.
+    --REQ-NF-1: El sistema debe responder con el analisis al usuario en menos de dos segundos.
+    --REQ-NF-2: El sistema debe responder con el resultado de las pruebas en menos de dos segundos.
+
 
 --Criterios de Exito
-    -CE-REQ-F-1: El sistema retorna de manera correcta el resultado del examen basado en el string suministrado.
-    -CE-REQ-NF-1: El sistema retorna la respuesta en menos de dos segundos.
-    -CE-REQ-NF-2: El sistema retorna los resultados de las pruebas en menos de dos segundos.
+    --CE-REQ-F-1: El sistema responde de manera correcta con la informacion de balance de el string ingresado.
+    --CE-REQ-NF-1: El sistema responde en menos de dos segundos.
+    --CE-REQ-NF-1: El sistema realiza las pruebas en menos de dos segundos.
 
 --Escenarios de prueba
-    --"()" => true
-    --"{[)" => false
-    --"a+(c+b)" => true
-    --"({[]})" => true
-    --"}" => false
+   --"(" => false
+   --"a+[b+c]" => true
+   --(a+[b+c])" => true
+   --"{[(]}" => false
+   --"{[()]}" => true
